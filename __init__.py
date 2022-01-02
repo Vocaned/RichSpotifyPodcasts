@@ -18,7 +18,7 @@ def main():
     while True:
         episode = spotify.currently_playing(additional_types='episode')
 
-        if not episode['context'] or episode['context']['currently_playing_type'] != 'episode':
+        if not episode['context'] or episode['currently_playing_type'] != 'episode':
             discord.clear()
             time.sleep(10)
             continue
